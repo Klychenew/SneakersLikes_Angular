@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
+
+.ContainerLogo{
+    display: flex;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+.divLogo{
+    display: flex;
+}
+.imgLogo{
+    width: 500px;
+}
+.divWeb a{
+    padding-right: 10px;
+}
+.divWeb a img{
+    width: 24px;
+}
+.menuHamb, .divBrowser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navAll{
+    border-top: 4px solid #ED6D1B;
+    padding: 7px 0;
+    background-color: #f4f4f4;
+}
+.textPoppies{
+    font-family: 'Signika Negative', sans-serif;
+    color: #2b2b2b;
+}
+.navAllHambur{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px solid #ED6D1B;
+    padding: 7px 0;
+
+}
+.divLogoHamb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.imgLogoHamb{
+    width: 350px;
+}
+.topVentas{
+    
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 700px;
+    padding: 50px ;
+}
+.textTopVentas{
+    font-size: 5rem;
+    font-weight: bold;
+}
+.lineWhite{
+    border-top: 4px solid #eee;
+    padding-right: 10%;
+}
+
+@media (max-width: 1140px){
+    .imgLogo{
+        width: 380px;
+    }
+}
+@media (max-width: 1140px){
+    .div-Container{
+        display: none !important;
+    }
+    .navAll{
+        justify-content: space-between;
+    }
+}
