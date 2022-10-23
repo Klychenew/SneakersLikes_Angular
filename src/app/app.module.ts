@@ -13,8 +13,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NewpostComponent } from './components/newpost/newpost.component';
 import { HttpClientModule } from "@angular/common/http";
-import { RegisterComponent } from './components/register/register.component';
-import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +24,7 @@ import { LoginComponent } from './components/login/login.component';
     ContactComponent,
     NavbarComponent,
     FooterComponent,
-    NewpostComponent,
-    RegisterComponent,
-    LoginComponent
+    NewpostComponent
   ],
   imports: [
     BrowserModule,

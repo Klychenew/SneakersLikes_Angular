@@ -62,7 +62,7 @@
     transform: translateY(-50%); 
 } */
 
-.imgTenisas{
+.imgTenis{
     width: 40%;
     height: 35%;
     position: relative;
@@ -87,25 +87,12 @@
     height: 200px;
     /* overflow-y: scroll; */
 }
-@media (max-width: 450px) {
+@media (max-width: 540px) {
     .textTopVentas{
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
-    .historia{
-        width: 100vw;
-        padding-right: 5px;
-        margin: 0;
-    }
-    .cultura{
-        padding: 5%;
-    }
-    .p{
-        padding-right: 3%;
-    }
-}
-@media(max-width:300px){
     .caja{
-        width: 100vw;
+        width: 80vw;
     }
 }
 
@@ -120,8 +107,8 @@
         justify-content: center;
         align-items: center;
     }
-    .imgTenisas{
-        width: 316px;
+    .imgTenis{
+        width: 400px;
     }
     .parrafo{
         width: 80vw;
