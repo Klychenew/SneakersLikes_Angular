@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -9,8 +9,8 @@ import Swal from 'sweetalert2';
 export class NavbarComponent implements OnInit {
 
 
-  constructor() { }
-
+  constructor() {
+  }
   ngOnInit(): void {
   }
 
@@ -22,7 +22,6 @@ export class NavbarComponent implements OnInit {
       confirmButtonColor: "#E9560D"
     })
   }
-  
 }
 
 
