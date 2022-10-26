@@ -51,13 +51,16 @@
                                     <a class="textPoppies nav-link" routerLink="/nosotros">Nosotros</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="textPoppies nav-link" routerLink="/publicaciones">Publicaciones</a>
+                                    <a class="textPoppies nav-link" routerLink="/publicacionDe">Publicaciones</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="textPoppies nav-link" routerLink="/diccionario">Diccionario</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="textPoppies nav-link" routerLink="/contacto">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="textPoppies nav-link" routerLink="/comentarios">Comentarios</a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="textPoppies nav-link dropdown-toggle" href="#" role="button"
@@ -67,11 +70,11 @@
                                     <ul class="dropdown-menu">
                                         <li>
                                             <a class="text-decoration-none w-100 d-flex justify-content-center align-items-center py-1 text-black"
-                                                routerLink="/login">Ingresar</a>
+                                                routerLink="/ingreso">Ingresar</a>
                                         </li>
                                         <li>
                                             <a class="text-decoration-none w-100 d-flex justify-content-center align-items-center py-1 text-black"
-                                                routerLink="/register">Registrarse</a>
+                                                routerLink="/registro">Registrarse</a>
                                         </li>
                                         <!-- <li>
                                             <hr class="dropdown-divider">
@@ -103,13 +106,16 @@
                     <a class="textPoppies nav-link" routerLink="/nosotros">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="textPoppies nav-link" routerLink="/publicaciones">Publicaciones</a>
+                    <a class="textPoppies nav-link" routerLink="/publicacionDe">Publicaciones</a>
                 </li>
                 <li class="nav-item">
                     <a class="textPoppies nav-link" routerLink="/diccionario">Diccionario</a>
                 </li>
                 <li class="nav-item">
                     <a class="textPoppies nav-link" routerLink="/contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="textPoppies nav-link" routerLink="/comentarios">Comentarios</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="textPoppies nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown"
@@ -263,7 +269,7 @@
     <div class="container mt-5 mb-5">
         <div class="row">
             <a  [routerLink]="['/ver-publicaciones', listarPost[5]._id]" routerLinkActive="router-link-active" class="text-black text-decoration-none col-12 p-3 col-sm-12 col-md-8 col-lg-8 d-flex justify-content-center align-content-center flex-column">
-                <img class="container imgCoca" src="{{listarPost[5].img}}" alt="">
+                <img class="container imgCoca" src="{{listarPost[5].img2}}" alt="">
                 <div>
                     <h4 class=" d-flex d-grid justify-content-center align-content-center mt-2">
                         {{listarPost[5].titleArticle}}</h4>
@@ -274,7 +280,7 @@
                 <div *ngIf="listarPost.length > 0">
                     <a href="#" class="text-decoration-none text-black" *ngFor="let miPost of listarPost">
                         <a [routerLink]="['/ver-publicaciones', miPost._id]" class="text-black text-decoration-none w-100 d-flex justify-content-start align-items-center p-2">
-                            <img class="imgNot" src="{{miPost.img}}" alt="">
+                            <img class="imgNot" src="{{miPost.img2}}" alt="">
                             <h6 class="ms-3">{{miPost.titleArticle}}</h6>
                         </a>
                     </a>

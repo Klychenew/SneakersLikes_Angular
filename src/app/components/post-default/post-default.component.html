@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<section c style=" height:350px; background-image: url('{{dataPost.banner}}'); background-repeat: no-repeat; background-size: cover;">
+<section c style=" height:350px; background-image: url('{{listarPost[5].banner}}'); background-repeat: no-repeat; background-size: cover;">
 </section>
 
 
@@ -10,16 +10,16 @@
             style="text-align: justify; font-family: 'Lato', sans-serif;">
             <div>
                 <div>
-                    <h2 class="mb-4"> {{dataPost.titleArticle}}
+                    <h2 class="mb-4"> {{listarPost[5].titleArticle}}
                     </h2>
                     <h6 style=" color:#ec6e33">Escrito por: Carlos Hernandez</h6>
                     <h6 style=" color:#ec6e33" class=" mb-3">Fecha de Publicacion: Octubre 10 2022</h6>
                 </div>
             </div>
             <div>
-                {{dataPost.post}}
+                {{listarPost[5].post}}
             </div>
-            <img class="imgPost" src="{{dataPost.img}}" alt="">
+            <img class="imgPost" src="{{listarPost[5].img}}" alt="">
         </div>
     </div>
     <div class="ultimasNot col-3 ms-5 my-5">

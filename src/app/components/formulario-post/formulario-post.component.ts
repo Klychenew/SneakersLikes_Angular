@@ -21,7 +21,9 @@ export class FormularioPostComponent implements OnInit {
     this.postForm = this.fb.group({
       titleArticle: ['', [Validators.required]],
       post: ['', [Validators.required]],
+      banner: ['', [Validators.required]],
       img: ['', [Validators.required]],
+      img2: ['', [Validators.required]]
     })
     this.id = this.idRoute.snapshot.paramMap.get('id')
   }
@@ -36,22 +38,36 @@ export class FormularioPostComponent implements OnInit {
     const POST: Post = {
       titleArticle: this.postForm.get('titleArticle')?.value,
       post: this.postForm.get('post')?.value,
-      img: this.postForm.get('img')?.value
+      img: this.postForm.get('img')?.value,
+      banner: this.postForm.get('banner')?.value,
+      img2: this.postForm.get('img2')?.value
     }
 
     console.log(POST)
-    this._postService.crearPost(POST).subscribe(data => {
-      this.router.navigate(['/newpost']);
-      Swal.fire({
-        title: 'Exito!',
-        text: 'La publicacion se realizó correctamente',
-        icon: 'success',
-        confirmButtonText: 'Vale'
+    if (this.id !== null) {
+      this._postService.putPost(this.id, POST).subscribe(data => {
+        console.log(data);
+        this.router.navigate(['/publicaciones']);
+        Swal.fire({
+          title: 'Exito!',  
+          text: 'Se actualizó la publicación correctamente',
+          icon: 'success',
+          confirmButtonText: 'Vale'
+        })
       })
-    }, error => {
-      console.log(error)
-    })
-
+    } else {
+      this._postService.crearPost(POST).subscribe(data => {
+        this.router.navigate(['/publicaciones']);
+        Swal.fire({
+          title: 'Exito!',  
+          text: 'La publicacion se realizó correctamente',
+          icon: 'success',
+          confirmButtonText: 'Vale'
+        })
+      }, error => {
+        console.log(error)
+      })
+    }
   }
 
   accionEditar(){
